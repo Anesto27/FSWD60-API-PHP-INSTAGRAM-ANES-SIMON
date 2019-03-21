@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V18</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">OREVIDA</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="login.php">Login <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="register.php">Register</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<video autoplay muted loop id="myVideo">
+		<source src="img/video.mp4" type="video/mp4">
+
+
+		</video>
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Send Us A Message
+				</span>
+
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<label class="label-input100" for="name">Full name</label>
+					<input id="name" class="input100" type="text" name="name" placeholder="Enter your name...">
+					<span class="focus-input100"></span>
+				</div>
+
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<label class="label-input100" for="email">Email Address</label>
+					<input id="email" class="input100" type="text" name="email" placeholder="Enter your email...">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<div class="label-input100">What do you need?</div>
+					<div>
+						<select class="js-select2" name="service">
+							<option>Sozialmedia Marketing</option>
+							<option>Web-Development</option>
+							<option>Logo Design</option>
+							<option>Support</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<label class="label-input100" for="message">Message</label>
+					<textarea id="message" class="input100" name="message" placeholder="Type your message here..."></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						Send
+					</button>
+				</div>
+			</form>
+
+		
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+		$(".js-select2").each(function(){
+			$(this).on('select2:open', function (e){
+				$(this).parent().next().addClass('eff-focus-selection');
+			});
+		});
+		$(".js-select2").each(function(){
+			$(this).on('select2:close', function (e){
+				$(this).parent().next().removeClass('eff-focus-selection');
+			});
+		});
+
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+	<footer id="myFoot" class="footer">        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="widget widget-text">
+                        <img src="img/logo.png" alt="logo-footer" width=200px height=190px>
+
+                    </div>
+                </div><!-- /.col-md-12 -->    
+            </div><!-- /.row -->    
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="sidebar-inner-footer">
+                        <div class="widget widget-infomation">
+                            <ul class="flat-information">
+                                <li class="email"><i class="fa fa-envelope" aria-hidden="true"></i> CodeFactory@gmail.com</li>
+                                <li class="phone"><i class="fa fa-phone" aria-hidden="true"></i> +436603781700</li>  
+                                <li class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> Kettenbrückengasse 23/2/12 1050 Vienna</li>    
+                            </ul>
+                            <hr>
+                        </div>
+                    </div><!-- /.sidebar-inner-footer -->    
+                </div><!-- /.col-md-12 -->    
+            </div><!-- /.row -->      
+        </div><!-- /.container -->
+    
+
+    <!-- Bottom -->
+    <div class="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="line-top"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container-buttom">
+                    <div class="col-md-6">
+                        <div class="copyright"> 
+                            <p>© Copyright CodeFactory 2019. <br>All Rights Reserved.
+                            </p>
+                        </div>                   
+                    </div><!-- /.col-md-6 -->
+
+                    <div class="col-md-6">
+                        <ul class="icons">
+                                <li>
+                                    <a href="https://www.facebook.com/CodeFactoryVienna/">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span class="fab fa-facebook-f" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/codefactoryvienna/">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span class="fab fa-instagram" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/codefactory?lang=de">
+                                        
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span class="fab fa-twitter" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                            </ul>   
+                    </div><!-- /.col-md-6 -->
+                </div><!-- /.container-bottom -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div>
+     </footer>
+</body>
+</html>
